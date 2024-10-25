@@ -5,7 +5,7 @@ function Kreditlar() {
 
 
     useEffect(() => {
-        fetch('/public/db.json')
+        fetch('https://jixuityqtvyuspnzkltq.supabase.co/storage/v1/object/public/azzz/db.json')
             .then((request) => request.json())
             .then((response) => setfamiliy(response.kreditlar));
     }, []);
@@ -88,14 +88,13 @@ function Kreditlar() {
       return;
     }
 
-    setError(""); // Oldingi xatolarni tozalash
+    setError(""); 
     setSuccessMessage("Tezda siz bilan aloqaga chiqamiz");
-    setShowSuccess(true); // Xabarni ko'rsatish
+    setShowSuccess(true); 
 
-    // Xabarni 3 soniyadan keyin yashirish
     setTimeout(() => {
       setShowSuccess(false);
-      setSuccessMessage(""); // Xabarni tozalash
+      setSuccessMessage(""); 
     }, 3000);
 
     SendBotMessage();

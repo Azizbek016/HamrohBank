@@ -6,7 +6,7 @@ function Kartalar() {
 
 
   useEffect(() => {
-    fetch('/public/db.json')
+    fetch('https://jixuityqtvyuspnzkltq.supabase.co/storage/v1/object/public/azzz/db.json')
       .then((request) => request.json())
       .then((response) => setfamiliy(response.cards));
   }, []);
