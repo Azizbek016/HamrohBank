@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 function Haqida() {
   const [familiy, setfamiliy] = useState([]);
   useEffect(() => {
-    fetch('/public/db.json')
+    fetch('https://jixuityqtvyuspnzkltq.supabase.co/storage/v1/object/public/azzz/db.json')
       .then((request) => request.json())
       .then((response) => setfamiliy(response.haqida));
   }, []);
@@ -66,22 +66,6 @@ function Haqida() {
 
           </div>
           <div className="haqida-boxs3">
-    <marquee behavior="scroll" direction="left" scrollamount="2">
-        <div className="haqida-cards">
-            {familiy.map((item, id) => (
-                <div className="haqida-cardw" key={id}>
-                    <div className="haqida-card_x">
-                        <img src={item.image} alt="" />
-                        <div className="info">
-                            <h4>{item.name}</h4>
-                            <h6>{item.who}</h6>
-                            <h6>{item.tel}</h6>
-                        </div>
-                    </div>
-                </div>
-            ))}
-        </div>
-    </marquee>
     <marquee behavior="scroll" direction="right" scrollamount="2">
         <div className="haqida-cards">
             {familiy.map((item, id) => (
