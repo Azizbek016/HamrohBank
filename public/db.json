@@ -1,0 +1,344 @@
+    {
+        "cards": [
+            {
+                "id": 1,
+                "name": "Visa Classic",
+                "images": "../src/img/ok1.png",
+                "price": "150 000 so`m",
+                "transfer": "10 milliongacha bepul pul o'tkazmalri",
+                "about": "Virtual karta — bu moddiy tashuvchisiz  karta.   Siz uni Hamroh mobil ilovasida  buyurtma qilishingiz  mumkin"
+            },
+            {
+                "id": 2,
+                "name": "HUMO",
+                "images": "../src/img/okHu.jpg",
+                "price": "100 000  so`m",
+                "transfer": "5 milliongacha bepul pul o'tkazmalri",
+                "about": "HUMO kartasi — har bir kun uchun eng yaxshi   yordamchi.Siz uni Hamroh mobil ilovasida  buyurtma qilishingiz  mumkin"
+            },
+            {
+                "id": 3,
+                "name": "UZCARD",
+                "images": "../src/img/okUz.png",
+                "price": "70 000   so`m",
+                "transfer": "5 milliongacha bepul pul o'tkazmalri",
+                "about": "UZCARD kartasi — har bir kun uchun eng yaxshi   yordamchi. Siz uni Hamroh mobil ilovasida  buyurtma qilishingiz  mumkin"
+            },
+            {
+                "id": 4,
+                "name": "UZCARD UnionPay",
+                "images": "../src/img/Uzp.jpg",
+                "price": "120 000  so`m",
+                "transfer": "5 milliongacha bepul pul o'tkazmalri",
+                "about": "Hamroh mobil ilovasida kartani faollashtirib, plastik   kartani olishni kutmasdan multivalyuta kartadan foydalanishni boshlang"
+            },
+            {
+                "id": 5,
+                "name": "HUMO Visa",
+                "images": "../src/img/Uzh.png",
+                "price": "80 000  so`m",
+                "transfer": "10 milliongacha bepul pul o'tkazmalri",
+                "about": "Hamroh mobil ilovasida kartani faollashtirib, plastik   kartani olishni kutmasdan multivalyuta kartadan foydalanishni boshlang"
+            },
+            {
+                "id": 6,
+                "name": "Visa Platinum",
+                "images": "../src/img/VisaP.png",
+                "price": "120 000  so`m",
+                "transfer": "15 milliongacha bepul pul o'tkazmalri",
+                "about": "Visa Platinum bilan yuqori qulaylikdagi sayohatSayohatlar   sug`urtasiga ega chet el valyutasidagi premial karta"
+            },
+            {
+                "id": 7,
+                "name": "Visa Infinite",
+                "images": "../src/img/visaI.png",
+                "price": "200 000  so`m ",
+                "transfer": "20 milliongacha bepul pul o'tkazmalri",
+                "about": "Visa Infinite bilan xavfsizlikda sayohat qilingSayohatlar   sug`urtasiga eda chet el valyutasidagi premial karta"
+            },
+            {
+                "id": 8,
+                "name": "Visa Virtual",
+                "images": "../src/img/Visa_Virtual.png",
+                "price": "Bepul ",
+                "transfer": "5 milliongacha bepul pul o'tkazmalri",
+                "about": "Visa Virtual — dunyo bo`ylab onlayn xaridlarChet e  l valyutasida virtual kartani bir zumda chiqartirish"
+            }
+            
+        ],
+        "omonatlar": [
+            {
+                "id":1,
+                "name":"Oson",
+                "haqida":"Nafaqat saqlang, balki daromadingizni ko`paytiring.",
+                "muddati":"Cheklovlarsiz to`ldirish birinchi 13 oy",
+                "foizi":"Yillik 26%",
+                "tuldirish":"Qisman yechish 100 000 000 so`m qoldirgan holdaBatafsil ma`lumot",
+                "img":"../src/img/o1.png"
+            },
+            {
+                "id":2,
+                "name":"YUQORI DAROMAD",
+                "haqida":"Yuqori foiz stavkasiga ega so'mli omonat",
+                "muddati":"Omonat muddati - 25 oy",
+                "foizi":"Oylik 27%",
+                "tuldirish":"Maksimal miqdor - cheksiz",
+                "img":"../src/img/o2.png"
+            },
+            {
+                "id":3,
+                "name":"24% ega ",
+                "haqida":"Oylik tushumga ega yuqori daromadli qisqa muddatli omonat",
+                "muddati":"Omonat muddati 6 oy",
+                "foizi":"Foiz stavkasi yillik 24% gacha",
+                "tuldirish":"Omonatni ochgandan keyin 60 kun ichida omonatingizni to'ldiring",
+                "img":"../src/img/o3.png"
+            },
+            {
+                "id":4,
+                "name":"SMART 3.0",
+                "haqida":"Nafaqat saqlang, balki daromadingizni ko‘paytiring.",
+                "muddati":"Omonat muddati 24 oy",
+                "foizi":" Foiz stavkasi yillik 23% gacha",
+                "tuldirish":"Omonatni cheklovlarsiz to‘ldirish  ",
+                "img":"../src/img/o8.png"
+            },
+            {
+                "id":5,
+                "name":" BALANDDA",
+                "haqida":"Yuqori foiz stavkasiga ega valyuta omonati ",
+                "muddati":"Omonat muddati 24 oy",
+                "foizi":"Yillik 9%",
+                "tuldirish":"Omonatni ochgandan keyin 6 oy ichida omonatingizni to'ldiring",
+                "img":"../src/img/o5.png"
+            },
+            {
+                "id":6,
+                "name":" Bayramona 26%",
+                "haqida":"Yanada yuqori yillik stavka",
+                "muddati":"Omonat muddati 24 oy",
+                "foizi":"Yillik 26%",
+                "tuldirish":"Qisman yechish taqdim etilmagan",
+                "img":"../src/img/o6.png"
+            },
+            {
+                "id":7,
+                "name":"ELITE valyuta ",
+                "haqida":"Eng sara mijozlar uchun muddatli omonat ",
+                "muddati":"Omonat muddati 2 yil",
+                "foizi":"Yillik 8%",
+                "tuldirish":"Pasaymaydigan qoldiq – 10 000 AQSh dollari",
+                "img":"../src/img/o5.png"
+            },
+            {
+                "id":8,
+                "name":"QULAY ",
+                "haqida":"Qisman yechib olish imkoniga ega moslashuvchan  omonati",
+                "muddati":"Omonat muddati 24 oy",
+                "foizi":"Yillik 7%",
+                "tuldirish":"Cheklovlarsiz qo'shimcha omonat qo'yish imkoniyati",
+                "img":"../src/img/o8.png"
+            }
+
+        ],
+        "kreditlar":[
+            {
+                "id":"1",
+                "name":"Auto light avtokrediti",
+                "miqdori":"600 mln so`mgacha",
+                "muddati":"5 yilgacha",
+                "stavkasi":"25,99% dan boshlab",
+                "image":"../src/img/k5gt.png"
+            },
+            {
+                "id":"2",
+                "name":"Iste`mol krediti",
+                "miqdori":"200 mln so‘mgacha",
+                "muddati":"5 yilgacha",
+                "stavkasi":"27% dan boshlab",
+                "image":"../src/img/ma.png"
+            },
+            {
+                "id":"3",
+                "name":"Xonadon, uy-joyni sotib olish va ta`mirlash uchun kredit",
+                "miqdori":"800 mln so‘mgacha",
+                "muddati":"20 yilgacha",
+                "stavkasi":"21,5% dan boshlab",
+                "image":"../src/img/kr5.png"
+            },
+            {
+                "id":"4",
+                "name":"Yangi qurilgan uylardan uy-joy xaridi uchun ipoteka krediti",
+                "miqdori":"420 mln so‘mgacha",
+                "muddati":"20 yilgacha",
+                "stavkasi":"17,5%",
+                "image":"../src/img/kr4.png"
+            },
+            {
+                "id":"5",
+                "name":"Bank o`z mablag`lari hisobidan ipoteka krediti",
+                "miqdori":"600 mln so‘mgacha",
+                "muddati":"10 yilgacha",
+                "stavkasi":"27%",
+                "image":"../src/img/kr5.png"
+            },
+            {
+                "id":"6",
+                "name":"Ta’lim krediti",
+                "miqdori":"shartnomaga asosan",
+                "muddati":"7 yilgacha",
+                "stavkasi":"13,5%",
+                "image":"../src/img/kr6.png"
+            },
+            {
+                "id":"7",
+                "name":"Quyosh panellarini sotib olish va o‘rnatish uchun iste’mol krediti",
+                "miqdori":"75 mln so‘mgacha",
+                "muddati":"3 yilgacha",
+                "stavkasi":"19,5%",
+                "image":"../src/img/kr7.png"
+            },
+            {
+                "id":"8",
+                "name":"Biznesga birinchi qadam",
+                "miqdori":"85 mln so'mgacha ",
+                "muddati":"3 yilgacha",
+                "stavkasi":"19,5%",
+                "image":"../src/img/kr12.png"
+            }
+        ],
+        "telnumber":[
+            { "name": "Afg'oniston", "callingCode": "+93", "flag": "🇦🇫" },
+            { "name": "Albaniya", "callingCode": "+355", "flag": "🇦🇱" },
+            { "name": "Algeriya", "callingCode": "+213", "flag": "🇩🇿" },
+            { "name": "Amerika Samoasi", "callingCode": "+1684", "flag": "🇦🇸" },
+            { "name": "Andorra", "callingCode": "+376", "flag": "🇦🇩" },
+            { "name": "Angola", "callingCode": "+244", "flag": "🇦🇴" },
+            { "name": "Anguilla", "callingCode": "+1264", "flag": "🇦🇮" },
+            { "name": "Antigva va Barbuda", "callingCode": "+1268", "flag": "🇦🇬" },
+            { "name": "Argentina", "callingCode": "+54", "flag": "🇦🇷" },
+            { "name": "Armaniston", "callingCode": "+374", "flag": "🇦🇲" },
+            { "name": "Avstraliya", "callingCode": "+61", "flag": "🇦🇺" },
+            { "name": "Avstriya", "callingCode": "+43", "flag": "🇦🇹" },
+            { "name": "Azerbayjon", "callingCode": "+994", "flag": "🇦🇿" },
+            { "name": "Bahamalar", "callingCode": "+1242", "flag": "🇧🇸" },
+            { "name": "Bahrayn", "callingCode": "+973", "flag": "🇧🇭" },
+            { "name": "Bangladesh", "callingCode": "+880", "flag": "🇧🇩" },
+            { "name": "Barbados", "callingCode": "+1246", "flag": "🇧🇧" },
+            { "name": "Belgiya", "callingCode": "+32", "flag": "🇧🇪" },
+            { "name": "Beliz", "callingCode": "+501", "flag": "🇧🇿" },
+            { "name": "Benin", "callingCode": "+229", "flag": "🇧🇯" },
+            { "name": "Bermud", "callingCode": "+1441", "flag": "🇧🇲" },
+            { "name": "Birlashgan Arab Amirliklari", "callingCode": "+971", "flag": "🇦🇪" },
+            { "name": "Birlashgan Qirollik", "callingCode": "+44", "flag": "🇬🇧" },
+            { "name": "Boliviya", "callingCode": "+591", "flag": "🇧🇴" },
+            { "name": "Bosniya va Gertsegovina", "callingCode": "+387", "flag": "🇧🇦" },
+            { "name": "Braziliya", "callingCode": "+55", "flag": "🇧🇷" },
+            { "name": "Burgundiya", "callingCode": "+359", "flag": "🇧🇬" },
+            { "name": "Vengriya", "callingCode": "+36", "flag": "🇭🇺" },
+            { "name": "Vyetnam", "callingCode": "+84", "flag": "🇻🇳" },
+            { "name": "Gana", "callingCode": "+233", "flag": "🇬🇭" },
+            { "name": "Germaniya", "callingCode": "+49", "flag": "🇩🇪" },
+            { "name": "Gonduras", "callingCode": "+504", "flag": "🇭🇳" },
+            { "name": "Gonkong", "callingCode": "+852", "flag": "🇭🇰" },
+            { "name": "Greqiya", "callingCode": "+30", "flag": "🇬🇷" },
+            { "name": "Gruziya", "callingCode": "+995", "flag": "🇬🇪" },
+            { "name": "Daniya", "callingCode": "+45", "flag": "🇩🇰" },
+            { "name": "Jamaika", "callingCode": "+1-876", "flag": "🇯🇲" },
+            { "name": "Janubiy Afrika", "callingCode": "+27", "flag": "🇿🇦" },
+            { "name": "Janubiy Koreya", "callingCode": "+82", "flag": "🇰🇷" },
+            { "name": "Yaponiya", "callingCode": "+81", "flag": "🇯🇵" },
+            { "name": "Indoneziya", "callingCode": "+62", "flag": "🇮🇩" },
+            { "name": "Hindiston", "callingCode": "+91", "flag": "🇮🇳" },
+            { "name": "Ispaniya", "callingCode": "+34", "flag": "🇪🇸" },
+            { "name": "Italiya", "callingCode": "+39", "flag": "🇮🇹" },
+            { "name": "Kazaxiston", "callingCode": "+7", "flag": "🇰🇿" },
+            { "name": "Kipr", "callingCode": "+357", "flag": "🇨🇾" },
+            { "name": "Kipr", "callingCode": "+357", "flag": "🇨🇾" },
+            { "name": "Kongo", "callingCode": "+242", "flag": "🇨🇩" },
+            { "name": "Kuba", "callingCode": "+53", "flag": "🇨🇺" },
+            { "name": "Latviya", "callingCode": "+371", "flag": "🇱🇻" },
+            { "name": "Lixtenshteyn", "callingCode": "+423", "flag": "🇱🇮" },
+            { "name": "Litva", "callingCode": "+370", "flag": "🇱🇹" },
+            { "name": "Malaziya", "callingCode": "+60", "flag": "🇲🇾" },
+            { "name": "Malta", "callingCode": "+356", "flag": "🇲🇹" },
+            { "name": "Meksika", "callingCode": "+52", "flag": "🇲🇽" },
+            { "name": "Mo'g'uliston", "callingCode": "+976", "flag": "🇲🇳" },
+            { "name": "Norvegiya", "callingCode": "+47", "flag": "🇳🇴" },
+            { "name": "O'zbekiston", "callingCode": "+998", "flag": "🇺🇿" },
+            { "name": "Polsha", "callingCode": "+48", "flag": "🇵🇱" },
+            { "name": "Portugal", "callingCode": "+351", "flag": "🇵🇹" },
+            { "name": "Qozog'iston", "callingCode": "+7", "flag": "🇰🇿" },
+            { "name": "Qatar", "callingCode": "+974", "flag": "🇶🇦" },
+            { "name": "Ruanda", "callingCode": "+250", "flag": "🇷🇼" },
+            { "name": "Rossiya", "callingCode": "+7", "flag": "🇷🇺" },
+            { "name": "Saudiya Arabistoni", "callingCode": "+966", "flag": "🇸🇦" },
+            { "name": "Senegal", "callingCode": "+221", "flag": "🇸🇳" },
+            { "name": "Serbiya", "callingCode": "+381", "flag": "🇷🇸" },
+            { "name": "Singapur", "callingCode": "+65", "flag": "🇸🇬" },
+            { "name": "Tajikiston", "callingCode": "+992", "flag": "🇹🇯" },
+            { "name": "Tanzaniya", "callingCode": "+255", "flag": "🇹🇿" },
+            { "name": "Tayvan", "callingCode": "+886", "flag": "🇹🇼" },
+            { "name": "Turkiya", "callingCode": "+90", "flag": "🇹🇷" },
+            { "name": "Ukraina", "callingCode": "+380", "flag": "🇺🇦" },
+            { "name": "Frantsiya", "callingCode": "+33", "flag": "🇫🇷" },
+            { "name": "Chexiya", "callingCode": "+420", "flag": "🇨🇿" },
+            { "name": "Chili", "callingCode": "+56", "flag": "🇨🇱" },
+            { "name": "Shvetsiya", "callingCode": "+46", "flag": "🇸🇪" },
+            { "name": "Shveytsariya", "callingCode": "+41", "flag": "🇨🇭" },
+            { "name": "Yangi Zelandiya", "callingCode": "+64", "flag": "🇳🇿" }
+        ],
+        "haqida":[
+            {
+                "id":"1",
+                "image":"../src/img/BehruzBank.jpg",
+                "name":"Behruz Berdimurodov ",
+                "who":"Bank Boshlig'i ",
+                "tel":"+998 90 517 76 41"
+            },
+            {
+                "id":"2",
+                "image":"../src/img/b11.png",
+                "name":"Atabayev Shuhrat Xaldarovich ",
+                "who":"Boshqaruv Raisi o'rin bosari",
+                "tel":"+998 78 120 17 87"
+            },
+  
+            {
+                "id":"3",
+                "image":"../src/img/b33.png",
+                "name":"Ruziyev Farrux Aralovich",
+                "who":"Boshqaruv Raisi o'rinbosari",
+                "tel":"+99878 120 17 87"
+            },
+            {
+                "id":"4",
+                "image":"../src/img/b44.png",
+                "name":"Kutliyev Dilshod Orifovich",
+                "who":"Boshqaruv Raisi o'rinbosari",
+                "tel":"+99878 120 17 87"
+            },
+            {
+                "id":"5",
+                "image":"../src/img/b55.png",
+                "name":"Rashidova Gulzoda Atakhanovna",
+                "who":"Boshqaruv Raisi o'rinbosari",
+                "tel":"+99878 120 17 87"
+            },
+            {
+                "id":"6",
+                "image":"../src/img/b66.png",
+                "name":"Tashmatov Nuriddin Zubaydullayevich",
+                "who":"Yuridik departamenti direktori",
+                "tel":"+99878 120 17 87"
+            },
+            {
+                "id":"7",
+                "image":"../src/img/b77.png",
+                "name":"Sabirov Ruslan Jumanazarovich",
+                "who":"Bosh buxgaltir",
+                "tel":"+99878 120 17 87"
+            }
+        ]
+
+    }

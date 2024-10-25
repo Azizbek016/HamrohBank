@@ -1,0 +1,2094 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1400px;
+  margin: auto;
+
+}
+::-webkit-scrollbar {
+  width: 9px; // kengligi
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  border-color: #00995f;
+  border: solid 1px rgba(53, 176, 110, 0.182);
+}
+
+.htn {
+  color: rgb(255, 7, 7) !important;
+  text-align: center;
+  margin-top: 80px;
+}
+.qwer {
+  margin-left: 44%;
+  margin-top: 30px;
+  position: relative;
+  display: inline-block;
+  background-color: #3498db; /* Tugma asosiy rangi */
+  color: white; /* Matn rangi */
+  padding: 15px 30px; /* Tugma ichki joyi */
+  border: none; /* Chegarasiz */
+  border-radius: 10px; /* Yumshoq burchaklar */
+  font-size: 16px; /* Matn o'lchami */
+  cursor: pointer; /* Ko'rsatkichni o'zgartiradi */
+  overflow: hidden; /* Tugma ichidagi elementlar uchun */
+  transition: all 0.3s ease; /* Barchasini animatsiya qilish */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Tugma soyasi */
+}
+.qwer::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s ease-out, opacity 2.5s ease;
+  z-index: 0;
+}
+
+.qwer:hover {
+  background-color: #2980b9;
+}
+
+.qwer:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0;
+}
+$dark-background: #121212;
+$dark-text: #ffffff;
+$light-background: #ffffff;
+$light-text: #000000;
+body {
+  &.dark-mode {
+    background-color: $dark-background;
+    color: $dark-text;
+
+    nav {
+      background-color: $dark-background;
+
+      .navChild2 {
+        ul {
+          li {
+            color: hsla(155, 66%, 39%, 0.885); // Asosiy rang
+            position: relative;
+
+            &:hover,
+            &.active {
+              color: hsl(162, 96%, 46%) !important;
+              transition: color 0.3s;
+            }
+
+            &:after {
+              content: "";
+              position: absolute;
+              left: 0;
+              right: 0;
+              bottom: -5px;
+              height: 2px;
+              background: hsla(155, 66%, 39%, 0.885); // Chiziq rangi
+              transform: scaleX(0);
+              transition: transform 0.3s;
+            }
+
+            &:hover:after,
+            &.active:after {
+              // Aktiv klassini qo'shish
+              transform: scaleX(1);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  nav {
+    background-color: $light-background;
+
+    .navChild2 {
+      ul {
+        li {
+          color: hsla(155, 66%, 39%, 0.885);
+          position: relative;
+
+          &:hover,
+          &.active {
+            // Aktiv klassini qo'shish
+            color: hsla(155, 66%, 39%, 0.885) !important; // Yashil rang
+            transition: color 0.3s;
+          }
+
+          &:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -5px;
+            height: 2px;
+            background: hsla(155, 66%, 39%, 0.885);
+            transform: scaleX(0);
+            transition: transform 0.3s;
+          }
+
+          &:hover:after,
+          &.active:after {
+            // Aktiv klassini qo'shish
+            transform: scaleX(1);
+          }
+        }
+      }
+    }
+  }
+}
+
+nav {
+  width: 1400px;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: solid 1px grey;
+  .navChild1 {
+    img {
+      width: 250px;
+      cursor: pointer;
+    }
+  }
+
+  .navChild2 {
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+
+      li {
+        cursor: pointer;
+        list-style: none;
+        position: relative;
+        font-size: 12px;
+        font-weight: 700;
+      }
+    }
+  }
+  .navChild3 {
+    display: flex;
+
+    button {
+      width: 130px;
+      height: 40px;
+      background-color: #00c073;
+      border: none;
+      font-size: 15px;
+      color: #ffffff;
+      cursor: pointer;
+      border-radius: 25px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: all 0.4s ease;
+      margin-left: 10px;
+      background-image: linear-gradient(135deg, #00c073, darken(#00c073, 10%));
+
+      &:hover {
+        background-image: linear-gradient(
+          135deg,
+          darken(#00c073, 10%),
+          #00c073
+        );
+        color: #ffffff;
+        transform: translateY(-1px) scale(1.01);
+      }
+
+      &:active {
+        transform: translateY(1px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+
+  .navChild4 {
+    img {
+      width: 20px;
+      cursor: pointer;
+
+      &:hover {
+        filter: brightness(1.2);
+      }
+    }
+  }
+}
+.commentBtn {
+  transition: 1s ease;
+  align-items: center;
+  justify-content: space-evenly;
+  display: flex;
+  width: 300px;
+  height: 50px;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  border-radius: 10px;
+  background-image: url(https://t4.ftcdn.net/jpg/03/08/93/49/360_F_308934934_FNBbSzY5fpgW5wQGdyRWOEZJcLUa2Hh7.jpg);
+  z-index: 98;
+  background-position: center;
+  color: white;
+  img {
+    width: 100px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+}
+.commentBtn:hover {
+  background-position: right;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: transform 13s ease;
+  transform: translateY(-100%);
+}
+
+.login-form,
+.welcome-message {
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+input {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 80%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.error-message {
+  color: red;
+  margin: 10px 0;
+}
+
+a {
+  text-decoration: none;
+}
+.A_p1 {
+    cursor: pointer;
+  h2 {
+    text-align: center;
+  }
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .swiperChild1,
+  .swiperChild2,
+  .swiperChild3 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 100px;
+
+    .A_p1-s1 {
+      width: 40%;
+      h1 {
+        font-size: 60px;
+        margin-bottom: 10px;
+        span {
+          color: rgb(41, 202, 156);
+          font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+            "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        }
+      }
+      h2 {
+        text-align: start;
+        margin-bottom: 10px;
+      }
+      button {
+        margin-top: 20px;
+        width: 200px;
+        height: 40px;
+        background-color: rgba(98, 224, 155, 0.958);
+        border: none;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        color: white;
+        font-size: 16px;
+        transition: color 0.3s ease;
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(76, 204, 135, 0.5);
+          top: -100%;
+          left: 0;
+          transition: top 0.5s ease;
+          z-index: 0;
+        }
+
+        &:hover::before {
+          top: 0;
+        }
+
+        &:hover {
+          color: black;
+        }
+      }
+    }
+
+    .A_p1-s2 {
+      width: 40%;
+      img {
+        width: 700px;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  @media (max-width: 900px) {
+    .swiperChild1,
+    .swiperChild2,
+    .swiperChild3 {
+      display: flex !important;
+      justify-content: space-evenly !important;
+    }
+
+    .A_p1-s1 {
+      h1 {
+        font-size: 40px !important;
+      }
+
+      button {
+        width: 140px !important;
+        height: 30px !important;
+      }
+      h2 {
+        font-size: 15px !important;
+      }
+    }
+
+    .A_p1-s2 {
+      img {
+        width: 90% !important;
+        max-width: 500px !important;
+      }
+    }
+  }
+}
+
+.A_p2 {
+  width: 95%;
+  height: 500px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 100px;
+  .A_p2-boxs1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .A_p2-boxs1-child {
+      h1 {
+        color: rgb(41, 202, 156);
+        font-size: 50px;
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: 20px;
+        margin-bottom: 30px;
+      }
+      button {
+        margin-top: 20px;
+        width: 200px;
+        height: 40px;
+        background-color: rgba(98, 224, 155, 0.958);
+        border: none;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        color: white;
+        font-size: 16px;
+        transition: color 0.3s ease;
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(76, 204, 135, 0.5);
+          top: -100%;
+          left: 0;
+          transition: top 0.5s ease;
+          z-index: 0;
+        }
+
+        &:hover::before {
+          top: 0;
+        }
+
+        &:hover {
+          color: black;
+        }
+      }
+    }
+  }
+  .A_p2-boxs2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      display: block;
+      width: 800px;
+    }
+  }
+}
+.ww {
+  transform: translateX(50%);
+  transform: translateY(20%);
+  margin-bottom: 230px;
+}
+.ww2 {
+  margin-top: 120px;
+  margin-left: 4px;
+}
+.containerr {
+  width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.auth-forms {
+  display: flex;
+  flex-direction: column;
+}
+
+.form,
+.sign-up-form {
+  margin-bottom: 20px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.buttonB {
+  width: 100%;
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.buttonB:hover {
+  background-color: #218838;
+}
+
+.toggle-link {
+  color: #007bff;
+  cursor: pointer;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+.A_p3_cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .article-dad {
+    width: 85%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+    .article_child1 {
+      margin: auto;
+      h1 {
+        font-size: 50px;
+        color: rgb(41, 202, 156);
+      }
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+
+  h1 {
+    margin-bottom: 20px;
+  }
+  .A_p3 {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 5px;
+    align-items: center;
+    margin-bottom: 100px;
+    background-repeat: no-repeat;
+    border: solid 1px grey;
+    border-radius: 30px;
+    .containerrr {
+      .slider{
+        cursor: pointer;
+      }
+      .input-group {
+        width: 500px;
+        margin-bottom: 45px;
+        margin-top: 50px;
+      }
+      .input-text {
+        border: none;
+        background-color: transparent;
+      }
+      label {
+        color: #0da330d8;
+      }
+    }
+    .containerrr2 {
+      width: 40%;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+
+      .additional-info {
+        display: block;
+
+        .c_text {
+          margin-left: -180px;
+          text-align: center;
+          font-size: 20px;
+          margin-top: -60px;
+          font-weight: 600;
+
+          span {
+            font-size: 40px;
+          }
+        }
+        .c_text2 {
+          margin-left: -180px;
+          text-align: center;
+          font-size: 20px;
+          margin-top: 39px;
+          font-weight: 600;
+          span {
+            font-size: 30px;
+          }
+        }
+        .line {
+          width: 390px;
+          height: 1px;
+          background-color: #00c073;
+          margin-left: -180px;
+        }
+      }
+      .info-button {
+        width: 160px;
+        height: 40px;
+        color: #ffffff;
+        background-color: #00a5139c;
+        border: solid 2px rgb(21, 189, 21);
+        border-radius: 5px;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.7s ease;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.A_p6 {
+  width: 100%;
+  margin-top: 70px;
+  margin-bottom: 80px;
+  .K_p1 {
+    width: 100%;
+    height: 450px;
+
+    background-image: url(https://hamkorbank.uz/assets/cache_image/products/physical/uzcard/hero_xl_1867x0_2fb.webP);
+    background-position: right;
+    .h1-cont {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      width: 500px;
+      height: 300px;
+      h1 {
+        font-size: 45px;
+        padding: 20px;
+        color: #014c10;
+      }
+    }
+    button {
+      width: 170px;
+      height: 50px;
+      background-color: #00c073;
+      border: none;
+      font-size: 20px;
+      color: #ffffff;
+      cursor: pointer;
+      border-radius: 25px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: all 0.4s ease;
+      margin-left: 20px;
+
+      background-image: linear-gradient(135deg, #00c073, darken(#00c073, 10%));
+
+      &:hover {
+        background-image: linear-gradient(
+          135deg,
+          darken(#00c073, 10%),
+          #00c073
+        );
+        color: #ffffff;
+        transform: translateY(-1px) scale(1.01);
+      }
+
+      &:active {
+        transform: translateY(1px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+}
+.A_p4 {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  width: 100%;
+  .haqida-boxs1 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    .h-b1 {
+      width: 50%;
+      h1 {
+        font-size: 53px;
+        font-weight: 600;
+        line-height: 1.4;
+        span {
+          color: #17b197;
+        }
+      }
+    }
+    .h-b2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40%;
+      img {
+        width: 500px;
+      }
+    }
+  }
+}
+.A_p5 {
+  width: 100%;
+  margin-bottom: 100px;
+  color: black;
+
+  .omonatend {
+    margin-bottom: 50px;
+    width: 100%;
+    height: 480px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(https://hamkorbank.uz/assets/cache_image/mobile-app/mobile_app_phys_xl_1867x0_2fb.webP);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .omonatend1 {
+      margin-left: 20px;
+      h1 {
+        margin-bottom: 30px;
+        font-size: 50px;
+        span {
+          color: green;
+        }
+      }
+      p {
+        margin-bottom: 10px;
+        font-size: 25px;
+      }
+      .mobile {
+        margin-top: 40px;
+        width: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        h3 {
+          color: green;
+          font-size: 20px;
+          margin-bottom: 12px;
+        }
+        img {
+          width: 100px;
+        }
+      }
+    }
+    .omonatend2 {
+      margin-bottom: -97px;
+    }
+  }
+}
+.A_p0 {
+  .omonatend {
+    margin-bottom: 50px;
+    width: 100%;
+    height: 480px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(https://hamkorbank.uz/assets/cache_image/mobile-app/mobile_app_phys_xl_1867x0_2fb.webP);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .omonatend1 {
+      margin-left: 20px;
+      h1 {
+        margin-bottom: 30px;
+        font-size: 50px;
+        span {
+          color: green;
+        }
+      }
+      p {
+        margin-bottom: 10px;
+        font-size: 25px;
+      }
+      .mobile {
+        margin-top: 40px;
+        width: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        h3 {
+          color: green;
+          font-size: 20px;
+          margin-bottom: 12px;
+        }
+        img {
+          width: 100px;
+        }
+      }
+    }
+    .omonatend2 {
+      margin-bottom: -97px;
+    }
+  }
+}
+.A_p7 {
+  .Contact {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    .Cp1 {
+      width: 100%;
+      height: 400px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url(https://hamkorbank.uz/assets/cache_image/mobile-app/mobile_app_phys_xl_1867x0_2fb.webP);
+      .Cp1_boxs2 {
+        img {
+          width: 700px;
+        }
+      }
+      .Cp1_boxs1 {
+        h1 {
+          font-size: 50px;
+          color: #00b569;
+          margin-left: 35px;
+          margin-bottom: 5px;
+        }
+        h2 {
+          font-size: 40px;
+          color: rgb(1, 70, 1);
+          margin-left: 35px;
+          margin-bottom: 30px;
+        }
+        p {
+          font-size: 30px;
+          color: rgb(1, 70, 1);
+          margin-left: 35px;
+        }
+      }
+    }
+  }
+}
+
+.A_p9 {
+  width: 100;
+
+  .chat-container {
+    max-width: 100%;
+    padding-bottom: 100px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    .saved-name {
+      margin: 10px 0;
+      font-weight: bold;
+      text-align: center;
+      font-size: 25px;
+    }
+
+    .marquee {
+      display: flex;
+      overflow: hidden;
+      white-space: nowrap;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      position: relative;
+
+      .marquee-content {
+        display: inline-flex;
+        animation: marquee 10s linear infinite;
+
+        @keyframes marquee {
+          0% {
+            transform: translateX(0%);
+          }
+          100% {
+            transform: translateX(-100%);
+          }
+        }
+
+        &:hover {
+          animation-play-state: paused;
+        }
+      }
+    }
+
+    .message {
+      border-left: 4px solid #2196f3;
+      border-radius: 5px;
+      padding: 10px;
+      margin: 0 10px;
+      width: 300px;
+      height: 150px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: transparent;
+      }
+      .message-image {
+        display: flex;
+        justify-content: end;
+        align-items: start;
+        margin-left: -20px;
+        width: 100%;
+        height: 30px;
+        img {
+          cursor: pointer;
+        }
+      }
+      .message-name {
+        img {
+          width: 30px;
+        }
+        font-weight: bold;
+        color: #2196f3;
+
+        span {
+          display: flex;
+          align-items: center;
+          justify-content: start;
+          gap: 5px;
+        }
+      }
+
+      .message-text {
+        flex-grow: 1;
+        overflow-y: auto;
+        overflow-x: hidden;
+        height: 100%;
+        display: block;
+        flex-direction: column;
+        white-space: normal;
+        padding: 1px 3px;
+      }
+    }
+
+    .input-container {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+      margin-left: 20px;
+      margin-right: 20px;
+
+      input {
+        padding: 12px; /* Kengroq padding */
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        margin-right: 10px;
+        width: 70%;
+        font-size: 16px; /* Kattaroq font */
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+        &:focus {
+          border-color: #4caf50; /* Fokusda rang o'zgarishi */
+          outline: none;
+          box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+        }
+
+        &::placeholder {
+          color: #aaa; /* Placeholder rangi */
+        }
+      }
+    }
+
+    .message-input {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+
+      input {
+        padding: 12px; /* Kengroq padding */
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        margin-right: 10px;
+        width: 70%;
+        font-size: 16px; /* Kattaroq font */
+        transition: border-color 0.3s ease;
+
+        &:focus {
+          border-color: #4caf50; /* Fokusda rang o'zgarishi */
+          outline: none;
+          box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+        }
+      }
+    }
+
+    .button {
+      padding: 2px 20px;
+      border: none;
+      background-color: #54ad57;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px; /* Kattaroq font */
+      position: relative; /* Pseudoelementlar uchun */
+      transition: background-color 0.3s ease, transform 0.2s ease;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(76, 175, 80, 0.2); /* Tugma hover holati */
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        border-radius: 5px;
+      }
+
+      &:hover {
+        background-color: #45a049; /* Tugma hover holatida rang o'zgarishi */
+
+        &::before {
+          opacity: 1; /* Hover holatida ko'rinadi */
+        }
+      }
+    }
+    .btnSend {
+      border: none;
+      background-color: transparent;
+
+      img {
+        width: 70px;
+        height: 50px;
+        cursor: pointer;
+      }
+    }
+
+    .confirmation-message {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #4caf50;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      animation: fadeUp 10s forwards;
+
+      @keyframes fadeUp {
+        0% {
+          opacity: 1;
+          transform: translate(-50%, 0);
+        }
+        100% {
+          opacity: 0;
+          transform: translate(-50%, -50px);
+        }
+      }
+    }
+
+    input.invalid {
+      border-color: red; /* Noto'g'ri input holati */
+    }
+
+    .like-button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 20px; /* Tugma o'lchami */
+      color: lightgray; /* Dastlabki oq rang */
+      transition: color 0.3s ease; /* Rang o'zgarishi */
+
+      &.liked {
+        color: red; /* Bosilganda qizil rang */
+      }
+    }
+  }
+}
+.NavPage {
+  margin-top: 100px;
+  .NavPageW {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .NavPageBox1 {
+      margin-bottom: -50px;
+      h2 {
+        font-size: 25px;
+        font-weight: 200;
+
+        p {
+          font-size: 20px;
+          color: rgb(139, 133, 133);
+          margin-bottom: 20px;
+        }
+      }
+      img {
+        width: 330px;
+        margin-bottom: 20px;
+      }
+    }
+    .NavPageBox2 {
+      display: block;
+      ul {
+        li {
+          color: hsla(155, 66%, 39%, 0.885);
+          position: relative;
+          list-style: none;
+          margin-top: 33px;
+          font-size: 20px;
+
+          &:hover,
+          &.active {
+            // Aktiv klassini qo'shish
+            color: hsla(155, 66%, 39%, 0.885) !important; // Yashil rang
+            transition: color 0.3s;
+          }
+
+          &:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -5px;
+            height: 2px;
+            background: hsla(155, 66%, 39%, 0.885);
+            transform: scaleX(0);
+            transition: transform 0.3s;
+          }
+
+          &:hover:after,
+          &.active:after {
+            // Aktiv klassini qo'shish
+            transform: scaleX(1);
+          }
+        }
+      }
+    }
+    .NavPageBox3 {
+      ul {
+        li {
+          color: hsla(155, 66%, 39%, 0.885);
+          position: relative;
+          list-style: none;
+          margin-top: 25px;
+          font-size: 20px;
+
+          &:hover,
+          &.active {
+            // Aktiv klassini qo'shish
+            color: hsla(155, 66%, 39%, 0.885) !important; // Yashil rang
+            transition: color 0.3s;
+          }
+
+          &:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -5px;
+            height: 2px;
+            background: hsla(155, 66%, 39%, 0.885);
+            transform: scaleX(0);
+            transition: transform 0.3s;
+          }
+
+          &:hover:after,
+          &.active:after {
+            // Aktiv klassini qo'shish
+            transform: scaleX(1);
+          }
+        }
+      }
+      .li {
+        font-size: 22px;
+      }
+    }
+    .NavPageBox4 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      h4 {
+        font-size: 25px;
+        color: #00ffc8;
+      }
+      img {
+        width: 160px;
+      }
+    }
+  }
+  .NavPageWW {
+    margin-top: 60px;
+    border-top: solid 1px grey;
+
+    span {
+      display: flex;
+      align-items: center;
+      margin-left: 88px;
+      margin-bottom: 10px;
+      margin-top: 20px;
+      gap: 20px;
+    }
+  }
+}
+
+.Omonatlarr {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  width: 100%;
+  .Omonatlar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: solid 1px gray;
+    margin-bottom: 40px;
+    border-radius: 20px;
+    padding-bottom: 20px;
+    button {
+      position: absolute;
+      left: 45%;
+      bottom: 5%;
+      width: 200px;
+      height: 40px;
+      background-color: #00c073;
+      border: none;
+      font-size: 20px;
+      color: #ffffff;
+      cursor: pointer;
+      border-radius: 25px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: all 0.4s ease;
+  
+      background-image: linear-gradient(135deg, #00c073, darken(#00c073, 10%));
+  
+      &:hover {
+        background-image: linear-gradient(135deg, darken(#00c073, 10%), #00c073);
+        color: #ffffff;
+        transform: translateY(-1px) scale(1.01);
+      }
+  
+      &:active {
+        transform: translateY(1px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      }
+    }
+    .nextB {
+      position: absolute;
+      left: 42%;
+      bottom: 60px;
+      width: 250px;
+      height: 40px;
+      cursor: text;
+      font-size: 25px;
+      img {
+        margin-left: 65px;
+        width: 80px;
+        cursor: pointer;
+      }
+    }
+  }
+  .Omonatlar_x {
+    
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    .aboutsDad {
+      margin-top: 140px;
+      height: 100%;
+      width: 745px;
+      .nameW {
+        h1 {
+          font-size: 46px;
+          color: #00b569;
+          border-radius: 10px;
+          margin-left: 30px;
+          span {
+            font-size: 44px;
+          }
+        }
+      }
+      .haqidaW {
+        margin-top: 12px;
+        width: 400px;
+        height: 125px;
+        font-size: 35px;
+        margin-left: 30px;
+      }
+      .ssD {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .muddatiW {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          p {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+          }
+          margin-left: 30px;
+          width: 250px;
+          height: 70px;
+          border: solid 1px green;
+          border-radius: 5px;
+        }
+        .foiziW {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-left: 30px;
+          width: 250px;
+          height: 70px;
+          border: solid 1px green;
+          border-radius: 5px;
+          p {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+          }
+        }
+        .tuldirishW {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-left: 30px;
+          width: 270px;
+          height: 70px;
+          border: solid 1px green;
+          border-radius: 5px;
+          p {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+          }
+        }
+      }
+    }
+
+    .image {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      width: 655px;
+    }
+  }
+  .omonatend {
+    
+    margin-bottom: 50px;
+    width: 100%;
+    height: 480px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(https://hamkorbank.uz/assets/cache_image/mobile-app/mobile_app_phys_xl_1867x0_2fb.webP);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .omonatend1 {
+      margin-left: 20px;
+      h1 {
+        margin-bottom: 30px;
+        font-size: 50px;
+        span {
+          color: green;
+        }
+      }
+      p {
+        margin-bottom: 10px;
+        font-size: 25px;
+      }
+      .mobile {
+        margin-top: 40px;
+        width: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        h3 {
+          color: green;
+          font-size: 20px;
+          margin-bottom: 12px;
+        }
+        img {
+          width: 100px;
+        }
+      }
+    }
+    .omonatend2 {
+      margin-bottom: -97px;
+    }
+  }
+
+
+}
+.Kartalar {
+  margin-top: 100px;
+
+  .K_p1 {
+    width: 100%;
+    height: 450px;
+
+    background-image: url(https://hamkorbank.uz/assets/cache_image/products/physical/uzcard/hero_xl_1867x0_2fb.webP);
+    background-position: right;
+    .h1-cont {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      width: 500px;
+      height: 300px;
+      h1 {
+        font-size: 45px;
+        padding: 20px;
+        color: #014c10;
+      }
+    }
+    p {
+      font-size: 30px;
+      margin-left: 20px;
+      color: #00995f;
+    }
+  }
+  .Ktalar {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+
+    img {
+      width: 70px;
+      margin-top: 20px;
+      margin-left: 257px;
+    }
+  }
+
+  }
+  .K_p2 {
+    .cards {
+      display: grid;
+      grid-gap: 20px;
+      width: 100%;
+      margin-top: 100px;
+      .cardW {
+        width: 100%;
+        height: 400px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        border: solid 1px grey;
+        border-radius: 10px;
+        h1 {
+          font-size: 60px;
+          text-shadow: 1px 3px 1px rgb(0, 255, 132);
+          color: #218838;
+          margin-left: 50px;
+        }
+        h2 {
+          color: brown;
+          margin-top: 50px;
+          margin-bottom: 50px;
+          margin-left: 50px;
+        }
+        .p_cont {
+          width: 600px;
+          p {
+            text-shadow: 1px 1px 1px #f9bdb8c1;
+            margin-left: 50px;
+          }
+        }
+        button {
+          width: 220px;
+          height: 37px;
+          margin-left: 50px;
+          margin-top: 60px;
+          border: 2px solid rgb(0, 132, 50);
+          color: #4caf50;
+          background-color: transparent;
+          border-radius: 5px;
+          cursor: pointer;
+          position: relative;
+          overflow: hidden;
+          font-size: 16px;
+          transition: color 0.4s, border-color 0.4s;
+        }
+
+        button::after {
+          content: "";
+          position: absolute;
+          left: 50%;
+          bottom: 0;
+          width: 100%;
+          height: 2px;
+          background-color: #4caf50;
+          transform: translateX(-50%) scaleX(0);
+          transition: transform 0.4s;
+        }
+
+        button:hover {
+          border-color: #4caf50;
+        }
+
+        button:hover::after {
+          transform: translateX(-50%) scaleX(1);
+        }
+        .card_x {
+          display: block;
+          width: 800px;
+        }
+      }
+
+      .card {
+        display: block;
+        width: 400px;
+        img{
+          width: 450px;
+        }
+      }
+    }
+  }
+
+.kreditlarBOX {
+  margin-top: 100px;
+  .Bgc {
+    width: 95%;
+    height: 500px;
+    background-image: url(../src//img/kred.png);
+    background-position: center left;
+    background-repeat: no-repeat;
+    border-radius: 30px;
+    margin-bottom: 30px;
+    margin-left: 36px;
+  }
+  width: 100%;
+  .kreditlar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 0px;
+    width: 100%;
+    height: 400px;
+    border: solid 1px rgb(123, 123, 134);
+    border-radius: 30px;
+    margin-bottom: 50px;
+    .kreditlarBox1 {
+      width: 30%;
+      .BoxsD {
+        width: 300px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 400px;
+        }
+      }
+    }
+    .kreditlarBox2 {
+      width: 60%;
+      .Box2_child1 {
+        margin-top: -70px;
+        h1 {
+          font-size: 45px;
+          margin-bottom: 40px;
+          color: green;
+        }
+      }
+      .Box2_child2 {
+        width: 630px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .M1 {
+          p {
+            font-size: 25px;
+          }
+          h3 {
+            font-size: 30px;
+          }
+        }
+        .M2 {
+          p {
+            font-size: 25px;
+          }
+          h3 {
+            font-size: 30px;
+            margin-bottom: 10px;
+          }
+          button {
+            width: 170px;
+            height: 50px;
+            background-color: #00c073;
+            border: none;
+            font-size: 20px;
+            color: #ffffff;
+            cursor: pointer;
+            border-radius: 25px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.4s ease;
+
+            background-image: linear-gradient(
+              135deg,
+              #00c073,
+              darken(#00c073, 10%)
+            );
+
+            &:hover {
+              background-image: linear-gradient(
+                135deg,
+                darken(#00c073, 10%),
+                #00c073
+              );
+              color: #ffffff;
+              transform: translateY(-1px) scale(1.01);
+            }
+
+            &:active {
+              transform: translateY(1px);
+              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.Ijtimoiyy {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+
+  .marquee-cont {
+    margin-top: -200px;
+    .marquee {
+      display: flex;
+      animation: marquee 20s linear infinite; // Tezlikni moslang
+      position: absolute;
+      left: 0; // Chapdan boshlash
+      gap: 100px;
+
+      .item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        .image-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .item-old {
+          width: 400px;
+          height: 250px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .item-old-text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .item-old-text-child {
+              width: 300px;
+              height: 250px;
+              .nex {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                margin-bottom: 20px;
+                margin-top: 10px;
+                gap: 20px;
+                .img {
+                  width: 100px;
+                }
+                h4 {
+                  font-size: 35px;
+                }
+              }
+              h5 {
+                font-size: 25px;
+                color: blue;
+                margin-bottom: 20px;
+              }
+              a {
+                font-size: 30px;
+                text-decoration: none;
+              }
+            }
+          }
+        }
+        button {
+          width: 60px;
+          height: 60px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: transparent;
+          transition: all 3s;
+          border: none;
+          img {
+            width: 50px;
+            cursor: pointer;
+          }
+        }
+
+        img {
+          width: 250px;
+        }
+      }
+    }
+    &:hover .marquee {
+      animation-play-state: paused;
+    }
+  }
+}
+.Haqida {
+  margin-top: 100px;
+  width: 100%;
+  .haqida-boxs1 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    .h-b1 {
+      width: 50%;
+      h1 {
+        font-size: 53px;
+        font-weight: 600;
+        line-height: 1.4;
+        span {
+          color: #17b197;
+        }
+      }
+    }
+    .h-b2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40%;
+      img {
+        width: 500px;
+      }
+    }
+  }
+  .haqida-boxs2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 60px;
+    .h-b2-child1 {
+      width: 45%;
+      p {
+        font-size: 30px;
+      }
+    }
+    .h-b2-child2 {
+      .grandf {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .book1 {
+          width: 270px;
+          height: 150px;
+          .lllDAD {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            gap: 7px;
+            .lll {
+              h2 {
+                font-size: 60px;
+                color: gray;
+                p {
+                  font-size: 40px;
+                }
+              }
+            }
+          }
+          .line {
+            width: 250px;
+            height: 2px;
+            background-color: rgb(255, 0, 0);
+          }
+        }
+      }
+    }
+  }
+  .haqida-boxs3 {
+    position: relative;
+    padding: 20px;
+    overflow: hidden;
+
+    marquee {
+      display: block;
+      font-size: 20px;
+      padding: 10px 0;
+
+      .haqida-cards {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+
+        .haqida-cardw {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .haqida-card_x {
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 350px;
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+            transition: background 1.7s ease;
+            z-index: 5;
+
+            .info {
+              position: absolute;
+              left: 25px;
+              bottom: 10px;
+              opacity: 0;
+              transform: translateX(-20px);
+              transition: opacity 0.5s ease, transform 0.5s ease;
+              color: rgb(255, 0, 0);
+              z-index: 7;
+
+              h4 {
+                margin-bottom: 5px;
+              }
+
+              h6 {
+                margin-bottom: 5px;
+              }
+
+              img {
+                width: 100%;
+              }
+            }
+
+            &:hover {
+              background: linear-gradient(
+                to bottom right,
+                #99fad3,
+                rgba(0, 255, 0, 0)
+              );
+              opacity: 0.8;
+
+              .info {
+                opacity: 1 !important; // Ko'rinishi
+                transform: translateX(0); // Asl joyiga qaytish
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.Contact {
+  margin-top: 100px;
+  .Cp1 {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(https://hamkorbank.uz/assets/cache_image/mobile-app/mobile_app_phys_xl_1867x0_2fb.webP);
+    .Cp1_boxs2 {
+      img {
+        width: 700px;
+      }
+    }
+    .Cp1_boxs1 {
+      h1 {
+        font-size: 50px;
+        color: #00b569;
+        margin-left: 35px;
+        margin-bottom: 5px;
+      }
+      h2 {
+        font-size: 40px;
+        color: rgb(1, 70, 1);
+        margin-left: 35px;
+        margin-bottom: 30px;
+      }
+      p {
+        font-size: 30px;
+        color: rgb(1, 70, 1);
+        margin-left: 35px;
+      }
+    }
+  }
+  .Cp2{
+    margin-top: 100px;
+    span{
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      margin-bottom: 50px;
+      gap: 50px;
+      font-size: 30px;
+      border-bottom: solid 2px rgb(77, 92, 85);
+      h1{
+        font-size: 30px;
+        border-right: solid 1px rgb(77, 92, 85);
+      }
+    }
+  }
+
+
+
+
+
+
+  
+}
+.App {
+  .content2{
+    img{
+      width: 400px;
+      margin-bottom: -10px;
+    }
+  }
+  .content{
+    h2{
+      color: #39af80;
+      margin-bottom: 50px;
+      font-size: 30px;
+    }
+    background-color: #fff;
+  }
+
+  .modall {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 900px;
+    height: 66%;
+    max-height: 600px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    z-index: 1000;
+
+    .hCont{
+      position: absolute;
+      top: 10px;
+      left: 20%;
+    }
+  }
+
+    form {
+padding: 20px;
+border-radius: 5px;
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+width: 400px;
+
+input {
+  width: 70%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s;
+
+  &:focus {
+    border-color: #007bff; // Asosiy rang
+    outline: none;
+  }
+}
+
+button {
+  width: 50%;
+  padding: 10px;
+  background-color: #007bff; // Asosiy rang
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #0056b3; // Hover rang
+  }
+}
+}
+
+p {
+margin: 10px 0;
+color: red; 
+}
+
+h1 {
+text-align: center;
+color: #28a745; 
+opacity: 0; 
+animation: fadeIn 5s forwards, fadeOut 5s 5s forwards;    
+}
+
+@keyframes fadeIn {
+to {
+  opacity: 1; 
+}
+}
+
+@keyframes fadeOut {
+from {
+  opacity: 1; // Boshlanishda ko'rinadigan
+}
+to {
+  opacity: 0; // Oxirida ko'rinmas
+}
+}
+
+    .close {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      border: none;
+      background-color: transparent;
+      font-size: 34px;
+      cursor: pointer;
+      color: rgb(0, 0, 0);
+
+      padding: 5px 10px;
+      &:hover{
+        background-color: rgb(255, 1, 1);
+      }
+    }
+
+  }
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
