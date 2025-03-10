@@ -1905,4 +1905,9 @@ input {
   100% {
     transform: translateX(-50%);
   }
+}
+@media (max-width: 100px) {
+  .container {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */
